@@ -7,7 +7,7 @@ export const ComponentCategoryAdd = ({ setCategories }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         if(inputValue.trim().length > 3) {
-            setCategories( categories => [...categories, inputValue]);
+            setCategories( categories => [inputValue, ...categories]);
             setInputValue('');
         }
         else {
